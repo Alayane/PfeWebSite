@@ -22,6 +22,8 @@ const btnAccept = document.getElementById('accept');
 const btnBillPrint = document.getElementById('btnPrint');
 const btnAddTable = document.getElementById('btnAddTable');
 const txtTableId = document.getElementById('txtTableId');
+let orderId
+let tableId
 
 
 
@@ -176,13 +178,32 @@ function tableDel() {
 }
 
 
-
+const upOrder= (id) => {
+    let nb=parseInt(id)
+    axios.post('http://localhost:64364/orders/up/'+nb)
+        .then(response => {
+            const addedUser = response.data;
+            loadDash();
+        })
+        .catch(error => console.log(error));
+};
 
 btnAccept.addEventListener('click',function(){
    
-})
+    upOrder(orderId)
 
+})
+const upTable= (id) => {
+    let nb=parseInt(id)
+    axios.post('http://localhost:64364/tables/take/'+nb+'/0')
+        .then(response => {
+            const addedUser = response.data;
+            loadTables();
+        })
+        .catch(error => console.log(error));
+};
 btnBillPrint.addEventListener('click',function(){
+    upTable(tableId);
 })
 
 function clc(){
@@ -196,8 +217,8 @@ function clc(){
         orderDetails.style.display = '';
             let prnt =  i.parentNode.parentNode;
             let nb = prnt.firstElementChild.textContent;
-            let id=parseInt(nb)
-            getDetails(id)
+             orderId=parseInt(nb)
+            getDetails(orderId)
         })
         })
         orderBtnBill.forEach((i) =>{
@@ -206,6 +227,7 @@ function clc(){
             orderBill.style.display = '';
             let prnt =  i.parentNode.parentNode;
             let nb = prnt.firstElementChild.textContent;
+            tableId = prnt.children[2].textContent;
             let id=parseInt(nb);
             getBill(id)
         })
@@ -219,6 +241,7 @@ function getDetails(id){
     xhr.onreadystatechange=function() {
         if(this.readyState === 4 && this.status===200) {
             let orders=JSON.parse(this.responseText);
+            if(orders=="empty") return
             let html;
             tblDetails.innerHTML="";
             orders.forEach(e=>{
@@ -244,6 +267,7 @@ function getBill(id){
     xhr.onreadystatechange=function() {
         if(this.readyState === 4 && this.status===200) {
             let orders=JSON.parse(this.responseText);
+            if(orders=="empty") return
             let html;
             tblBill.innerHTML="";
             orders.forEach(e=>{

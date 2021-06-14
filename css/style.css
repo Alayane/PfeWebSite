@@ -286,6 +286,9 @@ form>input:last-of-type{
     background-color: #ffb309;
     font-size: 20px;
 }
+#send{
+    cursor: pointer;
+}
 .form>h3{
     text-align: center;
     margin-bottom: 30px;

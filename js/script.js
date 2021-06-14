@@ -2,6 +2,10 @@
 
 const menuUl=document.getElementById('menuUl')
 const itemsDiv=document.getElementById('itemes')
+const send=document.getElementById('send')
+const email=document.getElementById('email')
+const subject=document.getElementById('subject')
+const message=document.getElementById('message')
 let menuLi
 
 
@@ -71,6 +75,25 @@ const getItems = (cat) => {
 };
 
 
+
+send.addEventListener('submit',event =>{  
+    event.preventDefault(); 
+    const email=document.getElementById('email').value
+    const subject=document.getElementById('subject').value
+    const message=document.getElementById('message').value
+    let con={email,subject,message}
+    sendMessage(con)
+})
+
+const sendMessage= (con) => {
+    axios.post('http://localhost:64364/contact/send',con)
+        .then(response => {
+            subject.value=""
+            message.value="" 
+            email.value=""
+        })
+        .catch(error => console.log(error));
+};
 
 
 
