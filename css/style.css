@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1002px;
+    margin: auto;
+}
+
+body{
+    width: 100%;
+    font-family: 'poppins' sans-serif;
+    background-color: black;
+}
+
+/* start home area */
+header{
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+}
+.logo>img{
+    padding-top: 10px;
+    height: 80px;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+header li{
+    margin-left: 25px;
+}
+header li>a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+header li>a:hover{
+    color: #ffb309;
+}
+
+
+#home{
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../img/background.jpg) ;
+    background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.homeText{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.homeText>h1{
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;;
+    font-size: 35px;
+}
+
+
+/* end home area */
+
+
+/* start menu area  */
+#menu{
+    padding: 40px 0;
+}
+.menuHeader{
+    padding: 40px 0 0 0;
+    border-bottom: 1px solid #ffb10978;
+    margin-bottom: 40px;
+}
+#menuUl{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#menuUl>li{
+    text-align: center;
+    padding: 0 10px 5px;
+    color: white;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+#menuUl>li:hover{
+   color:  #ffb309;
+}
+.active{
+    color: #ffb309 !important;
+    border-top: 1px solid #ffb10978;
+    border-left: 1px solid #ffb10978;
+    border-right: 1px solid #ffb10978;
+}
+.itemPic{
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+    background-position: center center ;
+    background-size: cover;
+}
+#itemes{
+    width: 100%;
+    display: flex;
+    color: black;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom:25px ;
+    flex-wrap: wrap;
+}
+
+.item{
+    font-family: 'poppins', sans-serif ;
+    width: 31%;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.itemDesc{
+    padding: 3px;
+}
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* end menu area  */
+
+/* start about area  */
+
+#about{
+    display: flex;
+    height: 90vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+.aboutPic{
+    flex: 2;
+    background-image: url('../img/chef.png');
+    background-position: center center;
+    background-size: cover;
+    border-radius: 19px 0 0 19px;
+}
+.aboutText{
+    flex: 1;
+    font-family: 'poppins',sans-serif;
+    padding: 110px 40px;
+    background-image: url('../img/background2.png');
+}
+.aboutText>h1{
+    font-size: 35px;
+}
+.aboutText>hr{
+    margin: 5px 0 20px 0;
+    width: 120px;
+    border: 1px solid #ffb309;
+}
+/* end about area  */
+/* start event area  */
+#event{
+    display: flex;
+    height: 90vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.eventPic{
+    flex: 2;
+    background-image: url('../img/event.jpg');
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0 19px 19px 0;
+}
+.eventText{
+    flex: 1;
+    font-family: 'poppins',sans-serif;
+    padding: 110px 40px;
+    background-image: url('../img/background2.png');
+}
+.eventText>h1{
+    font-size: 35px;
+}
+.eventText>hr{
+    margin: 5px 0 20px 0;
+    width: 120px;
+    border: 1px solid #ffb309;
+}
+/* end about area  */
+
+/* start booking area  */
+#booking{
+    margin: 80px 0;
+    height: 80vh;
+    background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('../img/terrace.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-clip: border-box;
+    position: relative;
+}
+.book{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1.9;
+    text-align: center;
+    color: white;
+    font-family: 'poppins',sans-serif;
+    letter-spacing: 2px;
+}
+.book>h4{
+    font-weight: 300;
+}
+.book>button{
+    cursor: pointer;
+    background-color: #ffb309;
+    padding: 10px 20px;
+    margin-top: 20px;
+    outline: none ;
+    border: none;
+    border-radius: 50em;
+    font-family: 'poppins',sans-serif;
+    font-weight: 500;
+}
+.book>button:hover{
+    background-color: #fbbd37;
+}
+/* end booking area  */
+/* start contact area  */
+#contact{
+    display: flex;
+    height: 90vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.form{
+    flex: 1;
+    align-items: center;
+    font-family: 'poppins',sans-serif;
+    padding: 110px 40px;
+    background-image: url('../img/background2.png');
+}
+form>input , textarea{
+    padding-left: 10px;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 50em;
+    outline: none ;
+    background: transparent;
+    border: .5px solid black;
+}
+form>textarea{
+    padding-top: 5px;
+    resize: none;
+    height: 80px;
+    border-radius: 20px;
+}
+form>input:last-of-type{
+    background-color: #ffb309;
+    font-size: 20px;
+}
+.form>h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#map{
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+/* end contact area  */
+/* start footer area  */
+#footer{
+    background-image:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('../img/footer.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 30px;
+    text-align: center;
+    font-family: 'poppins',sans-serif;
+    color: white;
+}
+.footer{
+    display: flex;
+    height: 20vh;
+}
+.foot{
+    flex: 1;
+}
+#footer>h3{
+    color: white;
+    font-weight: 500;
+}
+#footer>h3>a{
+    text-decoration: none;
+    color: #ffb309;
+}
+/* end footer area  */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body onload="loadTables()">
+    <div class="menu">
+        <img src="./img/logo2.png" alt="">
+        <ul>
+            <li id="btn-tables">Tables</li>
+            <li id="btn-orders">Orders</li>
+        </ul>
+    </div>
+    <div class="header">
+        <img src="./img/log-out.png" alt="log-out" title="Log Out ">
+        <p class="info"><span id="fname">Redouane</span> <span id="lname">Alahyane</span></p>   
+    </div>
+    <div class="content">
+    </div>
+    <div class="container">
+        <div class="add-table cont">
+            <h3>Add new table</h3>
+            <input type="number" id="txtTableId" pattern="{1,}" placeholder="Table id ">
+            <button id="btnQR">Create QR code</button>
+            <p id="nTable">QR code</p>
+            <canvas id="qr"></canvas> <br>
+            <button id="btnAddTable">Add Table</button>
+            <button id="print">Print QR code</button>
+        </div>
+        <div class="table-list cont">
+            <h3>Tables list</h3>
+            <table id="tblTables">
+            </table>
+        </div>
+        <div class="order">
+            <h3>Orders list</h3>
+            <table id="tblOrders">
+                
+            </table>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="close"></div>
+        <div class="form" id="details-order">
+            <h3>Order details</h3> 
+            <div>
+                <table id="tblDetails">
+                   
+                </table>
+            </div>
+            <button id="accept">Accept</button>
+        </div>
+        <div class="form" id="bill-order">
+            <!-- <div class="close"></div> -->
+            <h3>Bill</h3> 
+            <div>
+                <table id="tblBill">
+                   
+                </table>
+            </div>
+            <button id="btnPrint">Print</button>
+        </div>
+        
+    </div>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dashbord.js"></script>
+    <!-- scripts -->
+</body>
+</html>

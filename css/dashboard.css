@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 100vh;
+}
+.menu>img{
+    width: 150px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.menu{
+    background-color: #ffb309;
+    background-image: url('../img/background2.png');
+    width: 250px;
+    height: 100%;
+    position: fixed;
+}
+ul{
+    margin-top: 100px;
+    list-style: none;
+    color: #212121;
+}
+ul>li{
+    width: 100%;
+    height: 50px;
+    padding-top: 8px;
+    padding-left: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+ul>li:hover{
+    background-color: white;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    height: 60px;
+    width: 81.7%;
+    left: 250px;
+    position: fixed;
+    background-image: url('../img/background2.png');
+}
+.header>img{
+    width: 30px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.info{
+    height: 60px;
+    align-items: flex-end;
+    color: #ffb309;
+    font-size: 20px;
+    margin-right: 20px;
+    padding-top: 18px;
+}
+.content{
+    height: 100%;
+    background-color: #212121;
+    background-image: url('../img/background2.png');
+}
+.container{
+    width: 74%;
+    height: auto;
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    bottom: 40px;
+    background-color: white;
+    background-image: url('/img/background2.png');
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+}
+.cont{
+    flex: 1;
+    padding:30px ;
+    height: auto;
+}
+.cont h3,.order h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.add-table input{
+    margin-bottom: 10px;
+}
+.add-table button{
+    background-color: #ffb309;
+    color: #212121;
+    border-radius: 50em;
+    border: none;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.add-table p{
+    font-size: 300;
+}
+.add-table{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+} 
+.table-list{
+    background-color: #ffb309;
+    background-image: url('/img/background2.png')
+}
+.table-list table{
+    width: 100%;
+}
+.container table,th,td{
+    border: 1px solid #212121;
+    border-collapse: collapse;
+    text-align: center;
+}
+.container td>span{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.order{
+    flex: 1;
+    padding:30px ;
+    height: auto;
+    overflow: auto;
+}
+.order table{
+    width: 100%;
+}
+
+.forms{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+}
+.form{
+    position: absolute;
+    width: 400px;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    padding: 20px;
+    color: #ffb309;
+    background-color: #212121;
+    background-image: url('../img/background2.png');
+}    
+.form h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form table{
+    width: 70%;
+    margin: auto;
+}
+.form >div{
+    height: 200px;
+    overflow: auto;
+}
+.form tr>td{
+    width: 50%;
+    padding: 10px;
+    text-align: left;
+}
+.form button{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,-95%);
+    padding: 5px 35px;
+    border-radius: 50em;
+    border: none;
+    background-color: #ffb309;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.form select ,.form input{
+    width: 120px;
+    padding-left: 5px;
+}
+.close{
+    z-index: 10;
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    top: 135px;
+    right: 490px;
+    background-image: url('../img/close.png');
+    background-position: center center;
+    background-size: cover;
+}
+
