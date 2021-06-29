@@ -22,6 +22,7 @@ const btnAccept = document.getElementById('accept');
 const btnBillPrint = document.getElementById('btnPrint');
 const btnAddTable = document.getElementById('btnAddTable');
 const txtTableId = document.getElementById('txtTableId');
+const btnLogout = document.getElementById('btnLogout');
 let orderId
 let tableId
 
@@ -34,7 +35,9 @@ orderForms.style.display = 'none';
 orderDetails.style.display = 'none';
 orderBill.style.display = 'none';
 
-
+btnLogout.addEventListener('click',function(){
+    window.open('login.html','_self')
+})
 
 function loadDash(){
 
